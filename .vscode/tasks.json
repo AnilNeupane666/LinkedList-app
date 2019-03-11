@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "run app",
+        "type": "shell",
+        "command": "${workspaceFolder}/app.exe",
+        "args": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "dependsOn": [ "compile app" ],
+      },
+      {
+        "label": "compile app",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "main.cpp",
+          "-o",
+          "app.exe"
+        ],
+        "problemMatcher": []
+      }
+    ]
+  }
